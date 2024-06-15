@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: vendor-managment
+  cloud:
+    config:
+      enabled: false
+  data:
+    mongodb:
+      host: host.docker.internal
+      port: 27017
+      database: association
+
+server:
+  port: 6001
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://host.docker.internal:8761/eureka

@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: bill-managment
+  cloud:
+    config:
+      enabled: false
+  data:
+    mongodb:
+      host: host.docker.internal
+      port: 27017
+      database: association
+
+server:
+  port: 6002
+
+eureka:
+  instance:
+    hostname: host.docker.internal
+  client:
+    service-url:
+      defaultZone: http://host.docker.internal:8761/eureka
